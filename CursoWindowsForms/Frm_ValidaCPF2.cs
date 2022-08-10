@@ -10,16 +10,15 @@ using System.Windows.Forms;
 
 namespace CursoWindowsForms
 {
-    public partial class Frm_ValidaCPF : Form
+    public partial class Frm_ValidaCPF2 : Form
     {
-        public Frm_ValidaCPF()
+        public Frm_ValidaCPF2()
         {
             InitializeComponent();
         }
 
         private void Btn_Reset_Click(object sender, EventArgs e)
         {
-            Lbl_Resultado.Text = "";
             Msk_CPF.Text = "";
             Msk_CPF.Focus();
         }
@@ -30,15 +29,9 @@ namespace CursoWindowsForms
             validacao = Cls_Uteis.Valida(Msk_CPF.Text);
 
             if (validacao)
-            {
-                Lbl_Resultado.Text = "CPF Válido";
-                Lbl_Resultado.ForeColor = Color.Green;
-            }
+                MessageBox.Show("CPF Válido", "Mensagem de Validação", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
-            {
-                Lbl_Resultado.Text = "CPF Inválido";
-                Lbl_Resultado.ForeColor = Color.Red;
-            }
+                MessageBox.Show("CPF Inválido", "Mensagem de Validação", MessageBoxButtons.OK, MessageBoxIcon.Error);
             Btn_Reset.Focus();
         }
     }
