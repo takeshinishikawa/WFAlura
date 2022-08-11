@@ -14,7 +14,7 @@ namespace CursoWindowsForms
 
         private void Btn_Sair_Click_1(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
 
         private void Lbl_ModificaTexto_Click(object sender, EventArgs e)
