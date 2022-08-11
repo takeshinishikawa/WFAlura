@@ -1,6 +1,6 @@
 ﻿namespace CursoWindowsForms
 {
-    partial class Frm_PrincipalMenu
+    partial class Frm_PrincipalMenu_MDI
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_PrincipalMenu));
             this.Mnu_Principal = new System.Windows.Forms.MenuStrip();
             this.arquivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.novoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -78,7 +77,7 @@
             // 
             // demonstraçãoKeyToolStripMenuItem
             // 
-            this.demonstraçãoKeyToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("demonstraçãoKeyToolStripMenuItem.Image")));
+            this.demonstraçãoKeyToolStripMenuItem.Image = global::CursoWindowsForms.Properties.Resources.Frm_DemonstracaoKey1;
             this.demonstraçãoKeyToolStripMenuItem.Name = "demonstraçãoKeyToolStripMenuItem";
             this.demonstraçãoKeyToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.K)));
             this.demonstraçãoKeyToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
@@ -87,7 +86,7 @@
             // 
             // helloWorldToolStripMenuItem
             // 
-            this.helloWorldToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("helloWorldToolStripMenuItem.Image")));
+            this.helloWorldToolStripMenuItem.Image = global::CursoWindowsForms.Properties.Resources.Frm_HelloWorld1;
             this.helloWorldToolStripMenuItem.Name = "helloWorldToolStripMenuItem";
             this.helloWorldToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.W)));
             this.helloWorldToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
@@ -144,15 +143,15 @@
             this.windowsToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
             this.windowsToolStripMenuItem.Text = "Windows";
             // 
-            // Frm_PrincipalMenu
+            // Frm_PrincipalMenu_MDI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(617, 335);
             this.Controls.Add(this.Mnu_Principal);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.Mnu_Principal;
-            this.Name = "Frm_PrincipalMenu";
+            this.Name = "Frm_PrincipalMenu_MDI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Principal";
             this.Mnu_Principal.ResumeLayout(false);

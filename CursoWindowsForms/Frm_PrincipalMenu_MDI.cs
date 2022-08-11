@@ -10,47 +10,52 @@ using System.Windows.Forms;
 
 namespace CursoWindowsForms
 {
-    public partial class Frm_PrincipalMenu : Form
+    public partial class Frm_PrincipalMenu_MDI : Form
     {
-        public Frm_PrincipalMenu()
+        public Frm_PrincipalMenu_MDI()
         {
             InitializeComponent();
         }
-
         private void demonstraçãoKeyToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Frm_DemonstracaoKey f = new Frm_DemonstracaoKey();
-            f.ShowDialog();
+            f.MdiParent = this;
+            f.Show();
         }
 
         private void helloWorldToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Frm_HelloWorld f = new Frm_HelloWorld();
-            f.ShowDialog();
+            f.MdiParent = this;
+            f.Show();
         }
 
         private void máscaraToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Frm_Mascara f = new Frm_Mascara();
-            f.ShowDialog();
+            f.MdiParent = this;
+            f.Show();
         }
 
         private void validaCPFToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Frm_ValidaCPF f = new Frm_ValidaCPF();
-            f.ShowDialog();
+            f.MdiParent = this;
+            f.Show();
         }
 
         private void validaCPF2ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Frm_ValidaCPF2 f = new Frm_ValidaCPF2();
-            f.ShowDialog();
+            f.MdiParent = this;
+            f.Show();
         }
 
         private void validaSenhaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Frm_ValidaSenha f = new Frm_ValidaSenha();
-            f.ShowDialog();
+            f.MdiParent = this;
+            f.Show();
         }
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
