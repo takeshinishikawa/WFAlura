@@ -37,6 +37,7 @@
             // 
             // Btn_Sair
             // 
+            this.Btn_Sair.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Sair.Location = new System.Drawing.Point(278, 271);
             this.Btn_Sair.Name = "Btn_Sair";
             this.Btn_Sair.Size = new System.Drawing.Size(150, 23);
@@ -57,6 +58,8 @@
             // 
             // Lbl_ModificaTexto
             // 
+            this.Lbl_ModificaTexto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Lbl_ModificaTexto.Location = new System.Drawing.Point(13, 42);
             this.Lbl_ModificaTexto.Name = "Lbl_ModificaTexto";
             this.Lbl_ModificaTexto.Size = new System.Drawing.Size(257, 23);
@@ -67,6 +70,8 @@
             // 
             // Txt_ConteudoLabel
             // 
+            this.Txt_ConteudoLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Txt_ConteudoLabel.Location = new System.Drawing.Point(13, 75);
             this.Txt_ConteudoLabel.Name = "Txt_ConteudoLabel";
             this.Txt_ConteudoLabel.Size = new System.Drawing.Size(257, 23);
@@ -82,6 +87,7 @@
             this.Controls.Add(this.Lbl_Titulo);
             this.Controls.Add(this.Btn_Sair);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Frm_HelloWorld";
             this.Text = "Hello World";
             this.ResumeLayout(false);
