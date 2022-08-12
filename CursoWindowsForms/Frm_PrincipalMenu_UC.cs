@@ -18,6 +18,7 @@ namespace CursoWindowsForms
         int ControlValidaCPF = 0;
         int ControlValidaCPF2 = 0;
         int ControlValidaSenha = 0;
+        int ControlArquivoImagem = 0;
 
         public Frm_PrincipalMenu_UC()
         {
@@ -111,6 +112,29 @@ namespace CursoWindowsForms
         {
             if (Tbc_Aplicacoes.SelectedTab != null)
                 Tbc_Aplicacoes.TabPages.Remove(Tbc_Aplicacoes.SelectedTab);//Remove da TabControl a Tab que estiver selecionada
+        }
+
+        private void abrirImagemToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog Db = new OpenFileDialog();//instancia um obj do tipo OpenFileDialog
+            Db.InitialDirectory = "C:\\Users\\takes\\source\\repos\\Windows-Forms\\CursoWindowsForms\\Icones_Imagens\\";//Busca à partir da pasta indicada
+            Db.Filter = "PNG|*.PNG";//Filtra para que sejam apresentados somente itens no formato PNG
+            Db.Title = "Escolha a Imagem";
+
+            if (Db.ShowDialog() == DialogResult.OK)
+            {
+                string nomeArquivoImagem = Db.FileName;
+                
+                ControlArquivoImagem++;
+                Frm_ArquivoImagem_UC U = new Frm_ArquivoImagem_UC(nomeArquivoImagem);
+                U.Dock = DockStyle.Fill;
+                TabPage TB = new TabPage();
+                TB.Name = "Arquivo Imagem " + ControlArquivoImagem;
+                TB.Text = "Arquivo Imagem " + ControlArquivoImagem;
+                TB.ImageIndex = 6;
+                TB.Controls.Add(U);
+                Tbc_Aplicacoes.TabPages.Add(TB);
+            }
         }
     }
 }
